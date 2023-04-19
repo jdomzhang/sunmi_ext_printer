@@ -151,6 +151,16 @@ await pos.printColumnsText(["Milk 2L", "1", "3.50"], [18, 6, 8], [0, 2, 2]);
     await pos.flush();
 ```
 
-## SDK Document
+## Tested in printers
+
+- Sunmi NT211
+
+## Printer SDK
+
+### Version
+
+- [1.0.11](https://mvnrepository.com/artifact/com.sunmi/external-printerlibrary/1.0.11)
+
+## Document
 
 - [Sumni External Printer SDK Document](https://file.cdn.sunmi.com/SUNMIDOCS/%E5%95%86%E7%B1%B3%E5%A4%96%E6%8E%A5%E6%89%93%E5%8D%B0%E6%9C%BA%E5%BC%80%E5%8F%91%E8%80%85%E6%96%87%E6%A1%A3-2112.pdf)
