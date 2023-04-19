@@ -43,7 +43,7 @@ class _MyAppState extends State<MyApp> {
             ElevatedButton.icon(
                 onPressed: () => permitBleThenFind(context),
                 icon: const Icon(Icons.search),
-                label: const Text("搜索蓝牙打印机")),
+                label: const Text("Scan Printers")),
             for (var id in _bluetoothIds) BluetoothRow(id),
           ],
         )),

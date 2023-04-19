@@ -21,10 +21,17 @@ Support `Sunmi` external printer, based on `Sunmi` official SDK documnet for `Su
 
 ## Examples
 
+### Define a variable for later use
+
+```dart
+final pos = SunmiExtPrinter();
+```
+
 ### Scan bluetooth for paired devices
 
 ```dart
 Set<String> _bluetoothIds = {};
+// final pos = SunmiExtPrinter();
 
 void findBleDevices() async {
     var res = await pos.findBleDevice();
@@ -49,7 +56,7 @@ void findBleDevices() async {
 // Please **change** deviceID to the bluetooth address found by scanning result
 var deviceID = '74:F7:F:FD:41:0D';
 
-final pos = SunmiExtPrinter();
+// final pos = SunmiExtPrinter();
 await pos.setPrinter(SunmiPrinter.SunmiBlueToothPrinter, deviceID);
 await pos.connectPrinter();
 
@@ -61,6 +68,7 @@ await pos.printText("Rubybear\n");
 ### Print QrCode
 
 ```dart
+// final pos = SunmiExtPrinter();
 await pos.lineWrap();
 await pos.printQrCode("https://edesoft.com/en.html");
 await pos.lineWrap();
@@ -71,6 +79,7 @@ await pos.lineWrap();
 ```dart
 var bytes = await rootBundle.load('images/logo.png');
 var buf = bytes.buffer.asUint8List();
+// final pos = SunmiExtPrinter();
 await pos.printImage(buf);
 await pos.lineWrap();
 ```
@@ -118,6 +127,7 @@ import 'package:image/image.dart' as img;
 ### Print table
 
 ```dart
+// final pos = SunmiExtPrinter();
 await pos.enableBold(true);
 await pos.printColumnsText(["Item", "Qty", "Amt"], [18, 6, 8], [0, 2, 2]);
 
@@ -130,12 +140,14 @@ await pos.printColumnsText(["Milk 2L", "1", "3.50"], [18, 6, 8], [0, 2, 2]);
 ### Page cut
 
 ```dart
+    // final pos = SunmiExtPrinter();
     await pos.cutPaper(PaperCutMode.FullCut);
 ```
 
 ### Flush
 
 ```dart
+    // final pos = SunmiExtPrinter();
     await pos.flush();
 ```
 
